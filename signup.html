@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Bonzredit</title>
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffeff6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #ff7096;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+/* Styling for the Login Form */
+.input {
+    width: 100%;
+    max-width: 400px; /* Maximum width of the form */
+    margin: 5rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Ensure padding doesn't overflow */
+}
+
+/* Styling for Input Fields */
+.boxinput {
+    position: relative;
+    margin-bottom: 1.2rem;
+}
+
+.boxinput input {
+    width: 100%;
+    padding: 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid #ff7096;
+    border-radius: 25px;
+    font-size: 1rem;
+    background-color: #f9f0f7;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Ensures input stays within the container */
+}
+
+.boxinput input:focus {
+    outline: none;
+    border-color: #ff64a5;
+    box-shadow: 0 0 8px rgba(255, 112, 150, 0.6);
+}
+
+/* Icon inside Input Fields */
+.boxinput i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #ff7096;
+}
+
+/* Styling for the Login Button */
+.btninput {
+    width: 100%;
+    padding: 1rem;
+    background-color: #ff7096;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btninput:hover {
+    background-color: #ff64a5;
+}
+
+/* Footer (Link to Sign Up) */
+.bottom {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.bottom p {
+    font-size: 0.9rem;
+}
+
+.bottom a {
+    color: #ff7096;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    color: #ff7096;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Media Query for Tablet and Smaller Screens */
+@media only screen and (max-width: 1024px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .input {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .boxinput input {
+        font-size: 1rem;
+        padding-left: 2rem;
+    }
+
+    .btninput {
+        font-size: 1rem;
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .input {
+        width: 85%;
+        padding: 1.2rem;
+    }
+
+    .boxinput input {
+        font-size: 1rem;
+        padding-left: 1.8rem;
+    }
+
+    .btninput {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .back-button {
+        font-size: 1.8rem;
+    }
+}
+
+/* Media Query for Very Small Devices (like small phones) */
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .input {
+        width: 80%;
+        padding: 1rem;
+    }
+    
+    .boxinput input {
+        font-size: 0.9rem;
+        padding-left: 1.5rem;
+    }
+
+    .btninput {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .back-button {
+        font-size: 1.6rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Button to go back to the previous page -->
+    <button class="back-button" onclick="window.location.href='awalbgt.html'">
+        <i class="bi bi-arrow-left-circle"></i>
+    </button>
+
+    <!-- Login Section -->
+    <div class="input">
+        <h1>SIGN UP</h1>
+        <form id="signUpForm">
+            <div class="boxinput">
+                <i class="bi bi-envelope-heart"></i>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="boxinput">
+                <i class="bi bi-chat-square-heart"></i>
+                <input type="nama" id="nama" name="nama" placeholder="Nama Lengkap" required>
+            </div>
+        
+            <div class="boxinput">
+                <i class="bi bi-person-heart"></i>
+                <input type="text" id="username "name="username" placeholder="Username">
+            </div>
+            <div class="boxinput">
+                <i class="bi bi-bag-heart"></i>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btninput">Sign up</button>
+            <div class="bottom">
+                <p>Sudah punya akun? <a href="signin.html">Login disini</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript to handle form submission
+        document.getElementById("signUpForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Show an alert when the form is submitted
+            alert("Sign Up Berhasil!");
+
+            // Redirect the user to the login page
+            window.location.href = "signin.html"; // Replace with the actual login page URL
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Transaksi</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffeff6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #ff7096;
+    padding: 1.5rem;
+    text-align: center;
+    color: white;
+    border-bottom: 5px solid #f48fb1;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#searchBar {
+    padding: 0.8rem;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    border: 2px solid #ff7096;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+#searchBar:focus {
+    outline: none;
+    border-color: #f48fb1;
+    box-shadow: 0 0 8px rgba(255, 112, 150, 0.6);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #ff7096;
+    color: white;
+}
+
+th, td {
+    padding: 1.2rem;
+    border-bottom: 2px solid #fce4ec;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fce4ec;
+}
+
+tbody tr:hover {
+    background-color: #f8bbd0;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+tfoot {
+    background-color: #ff7096;
+    color: white;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #ff7096;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    margin-top: 2rem;
+    border-top: 5px solid #f48fb1;
+}
+
+.btn-link {
+    color: #f78fb3;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    margin-right: 30px;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    color: #fa9cbf;
+    text-decoration: underline;
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #searchBar {
+        width: 90%;
+        padding: 0.6rem;
+        font-size: 1rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 0.8rem;
+    }
+
+    /* Modify table for small screens */
+    .container {
+        padding: 1rem;
+    }
+
+    .transaction-section {
+        padding: 1rem;
+    }
+}
+
+/* Media Query for Very Small Devices (portrait phones) */
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #searchBar {
+        width: 85%;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: 0.6rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Daftar Transaksi</h1>
+    </header>
+
+    <section class="transaction-section">
+        <input type="text" id="searchBar" placeholder="Cari transaksi...">
+        <div class="mt-3 text-end">
+            <a href="trancakci.html" class="btn-link">Kembali ke Transaksi</a>
+        </div>
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Jumlah</th>
+                        <th>Jenis Transaksi</th>
+                        <th>Metode Transaksi</th>
+                        <th>Tanggal</th>
+                    </tr>
+                </thead>
+                <tbody id="transactionTableBody">
+                    <!-- Data Transaksi akan dimasukkan di sini oleh JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Bonzredit. Semua hak cipta dilindungi.</p>
+    </footer>
+
+    <script >
+        const transactions = [
+    {
+        no: 1,
+        nama: "Kim Mingyu",
+        jumlah: "Rp 1.500.000",
+        jenisTransaksi: "Pinjam Uang",
+        metodeTransaksi: "Transfer Bank",
+        tanggal: "2025-01-01"
+    },
+    {
+        no: 2,
+        nama: "Lalisa Manoban",
+        jumlah: "Rp 500.000",
+        jenisTransaksi: "Simpan Uang",
+        metodeTransaksi: "Tunai",
+        tanggal: "2025-01-03"
+    },
+    {
+        no: 3,
+        nama: "Irene",
+        jumlah: "Rp 2.000.000",
+        jenisTransaksi: "Pinjam Uang",
+        metodeTransaksi: "Transfer Bank",
+        tanggal: "2025-01-04"
+    },
+    {
+        no: 4,
+        nama: "Park Chanyeol",
+        jumlah: "Rp 750.000",
+        jenisTransaksi: "Simpan Uang",
+        metodeTransaksi: "Tunai",
+        tanggal: "2025-01-05"
+    }
+];
+
+// Fungsi untuk menampilkan transaksi ke dalam tabel
+function displayTransactions() {
+    const tableBody = document.getElementById("transactionTableBody");
+    tableBody.innerHTML = ""; // Kosongkan tabel sebelum memasukkan data baru
+
+    // Menambahkan setiap transaksi ke dalam tabel
+    transactions.forEach(transaction => {
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+            <td>${transaction.no}</td>
+            <td>${transaction.nama}</td>
+            <td>${transaction.jumlah}</td>
+            <td>${transaction.jenisTransaksi}</td>
+            <td>${transaction.metodeTransaksi}</td>
+            <td>${transaction.tanggal}</td>
+        `;
+
+        tableBody.appendChild(row);
+    });
+}
+
+// Panggil fungsi untuk menampilkan transaksi ketika halaman dimuat
+window.onload = displayTransactions;
+
+    </script>
+</body>
+</html>

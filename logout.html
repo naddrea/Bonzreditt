@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout - Bonzredit</title>
+    <link rel="stylesheet" href="./css/logout.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffe4e6, #ffebf0);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .logout-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .logout-container h1 {
+            font-size: 2rem;
+            color: #ff7096;
+            margin-bottom: 1rem;
+        }
+
+        .logout-container p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .logout-container .btn {
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+            text-decoration: none;
+        }
+
+        .btn-logout {
+            background: #ff7096;
+            color: white;
+            margin-right: 1rem;
+        }
+
+        .btn-logout:hover {
+            background: #fa9cbf;
+        }
+
+        .btn-cancel {
+            background: #ccc;
+            color: #333;
+        }
+
+        .btn-cancel:hover {
+            background: #bbb;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logout-container">
+        <h1>Keluar dari Akun?</h1>
+        <p>Anda yakin ingin keluar dari akun Anda?</p>
+        <div>
+            <!-- Tombol Logout -->
+            <a href="index.html" class="btn btn-logout">Logout</a>
+            <!-- Tombol Batal -->
+            <a href="home.html" class="btn btn-cancel">Batal</a>
+        </div>
+    </div>
+</body>
+</html>
